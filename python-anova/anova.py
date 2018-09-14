@@ -66,7 +66,7 @@ def format_output(statsmodels_dict):
     return json.dumps(DataFrame.from_dict(statsmodels_dict).transpose().fillna("NaN").to_dict())
 
 
-def compute_anova(dep_var, indep_vars, data, design='factorial'):
+def compute_anova(dep_var, indep_vars, data, design= DEFAULT_DESIGN):
     formula = generate_formula(dep_var, indep_vars, design)
     logging.info("Formula: %s" % formula)
     data = DataFrame(data)
