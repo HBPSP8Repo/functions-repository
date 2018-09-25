@@ -210,3 +210,8 @@ jobs:
       #    name: "Test python-longitudinal"
       #    command: |
       #      PATH=$PATH:/$HOME/.captain/bin/ ./python-longitudinal/tests/test.sh
+
+
+notify:
+  webhooks:
+    - url: https://webhook.atomist.com/atomist/circle/teams/T233KRG4R
